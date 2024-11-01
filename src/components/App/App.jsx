@@ -2,12 +2,16 @@ import css from './App.module.css';
 import ContactForm from '../ContactForm/ContactForm';
 import SearchBox from '../SearchBox/SearchBox';
 import ContactList from '../ContactList/ContactList';
-import { useDispatch } from 'react-redux';
+import Loader from '../Loader/Loader';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contactsOps';
+import { selectError, selectIsLoading } from '../../redux/contactsSlice';
 
 const App = () => {
   const dispatch = useDispatch();
+  const isloading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchContacts);
@@ -18,6 +22,7 @@ const App = () => {
       <ContactForm />
       <SearchBox />
       <ContactList />
+      {isloading && !error && <Loader />}
     </div>
   );
 };
