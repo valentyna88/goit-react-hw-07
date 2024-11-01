@@ -50,7 +50,7 @@
 .errorMessage {
   position: absolute;
   bottom: 9px;
-  left: 320px;
+  left: 220px;
   color: red;
   white-space: nowrap;
 }

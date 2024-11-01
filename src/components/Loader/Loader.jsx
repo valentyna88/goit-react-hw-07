@@ -4,8 +4,8 @@ import css from './Loader.module.css';
 const Loader = () => {
   return (
     <Bars
-      height="100"
-      width="100"
+      height="30"
+      width="30"
       color="DodgerBlue"
       ariaLabel="bars-loading"
       wrapperClass={css.loader}
