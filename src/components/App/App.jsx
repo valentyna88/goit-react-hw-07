@@ -10,7 +10,7 @@ import { selectError, selectIsLoading } from '../../redux/contactsSlice';
 
 const App = () => {
   const dispatch = useDispatch();
-  const isloading = useSelector(selectIsLoading);
+  const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const App = () => {
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      {isloading && !error && <Loader />}
+      {isLoading && !error && <Loader />}
       <ContactList />
     </div>
   );

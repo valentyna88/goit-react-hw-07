@@ -20,7 +20,7 @@ export const selectFilteredContacts = createSelector(
 );
 
 const INITIAL_STATE = {
-  items: [],
+  items: null,
   isLoading: false,
   error: null,
 };
