@@ -14,15 +14,15 @@ const App = () => {
   const error = useSelector(selectError);
 
   useEffect(() => {
-    dispatch(fetchContacts);
+    dispatch(fetchContacts());
   }, [dispatch]);
   return (
     <div className={css.container}>
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      <ContactList />
       {isloading && !error && <Loader />}
+      <ContactList />
     </div>
   );
 };

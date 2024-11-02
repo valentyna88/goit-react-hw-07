@@ -6,7 +6,7 @@ const Loader = () => {
     <Bars
       height="30"
       width="30"
-      color="DodgerBlue"
+      color="#2183ab"
       ariaLabel="bars-loading"
       wrapperClass={css.loader}
       visible={true}
